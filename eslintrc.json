@@ -1,9 +1,0 @@
-// {
-//     "extends": [
-//         "react-app",
-//         "eslint:recommended"
-//     ],
-//     "rules": {
-//         "no-unused-vars": "warn"
-//     }
-// }
