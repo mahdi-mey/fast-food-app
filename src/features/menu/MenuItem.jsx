@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { formatCurrency } from "../../utils/helpers"
+import Button from "../../ui/Button"
 
 function MenuItem({ pizza }) {
   const { id, name, unitPrice, ingredients, soldOut, imageUrl } = pizza
@@ -22,9 +23,7 @@ function MenuItem({ pizza }) {
           ) : (
             <p className="uppercase">Sold out</p>
           )}
-          <button className="text-xs bg-yellow-500 uppercase font-semibold text-stone-900 py-2 px-3 inline-block rounded-full hover:bg-yellow-300 transition-all focus:outline-none focus:ring focus:ring-yellow-300 focus:bg-yellow-300 focus:ring-offset-2 mt-4 disabled:cursor-not-allowed md:text-base">
-            Add To Cart
-          </button>
+          <Button type="small">Add to cart</Button>
         </div>
       </div>
     </li>
