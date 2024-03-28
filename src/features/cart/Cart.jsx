@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import CartItem from "./CartItem"
-import Button from '../../ui/Button';
+import Button from "../../ui/Button"
 
 const fakeCart = [
   {
@@ -36,7 +36,7 @@ function Cart() {
       </Link>
 
       <ul className="divide-y divide-stone-200 border-b-1 mt-3">
-        {cart.map(item => (
+        {cart.map((item) => (
           <CartItem item={item} key={item.key} />
         ))}
       </ul>
