@@ -4,13 +4,13 @@ const initialState = {
     cart: [],
 
     // example structure
-    // {
+    // cart: [{
     //     pizzaId: 12,
-    //     name: 'Pepperoni',
+    //     name: 'eshshshayin sike',
     //     quantity: 2,
     //     unitPrice: 16,
     //     totalPrice: 32
-    // }
+    // }]
 }
 
 const cartSlice = createSlice({
