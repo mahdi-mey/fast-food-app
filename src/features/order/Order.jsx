@@ -60,23 +60,23 @@ function Order() {
   const deliveryIn = calcMinutesLeft(estimatedDelivery)
 
   return (
-    <div className="px-4 py-6 space-y-8">
-      <div className="flex items-center justify-between flex-wrap gap-3">
+    <div className="space-y-8 px-4 py-6">
+      <div className="flex flex-wrap items-center justify-between gap-3">
         <h2 className="text-xl font-semibold">Order #{id} status</h2>
 
         <div className="space-x-2">
           {priority && (
-            <span className="bg-red-500 text-sm uppercase text-red-50 tracking-wide rounded-full py-2 px-2">
+            <span className="rounded-full bg-red-500 px-2 py-2 text-sm uppercase tracking-wide text-red-50">
               Priority
             </span>
           )}
-          <span className="bg-green-500 text-sm uppercase text-red-50 tracking-wide rounded-full py-2 px-2">
+          <span className="rounded-full bg-green-500 px-2 py-2 text-sm uppercase tracking-wide text-red-50">
             {status} order
           </span>
         </div>
       </div>
 
-      <div className="flex items-center justify-between flex-wrap gap-3 bg-stone-200 px-6 py-5">
+      <div className="flex flex-wrap items-center justify-between gap-3 bg-stone-200 px-6 py-5">
         <p className="font-medium">
           {deliveryIn >= 0
             ? `Only ${calcMinutesLeft(estimatedDelivery)} minutes left 😃`
@@ -87,9 +87,9 @@ function Order() {
         </p>
       </div>
 
-      <ul className="divide-stone-200 divide-y border-b border-t">
+      <ul className="divide-y divide-stone-200 border-b border-t">
         {cart.map((item) => (
-          <OrderItem item={item} key={item.id} />
+          <OrderItem item={item} key={item.pizzaId} />
         ))}
       </ul>
 
